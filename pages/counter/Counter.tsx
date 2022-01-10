@@ -3,7 +3,7 @@ import { useAppSelector, useAppDispatch } from '../../app/hooks';
 import { decrement, increment, incrementByAmount, incrementAsync } from './counterSlice';
 import styles from './Counter.module.css';
 
-const Counter = (): JSX.Element => {
+const Counter: React.FC = () => {
   const count = useAppSelector((state) => state.counter.countNum);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
